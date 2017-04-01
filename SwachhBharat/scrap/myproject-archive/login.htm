@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+background-color: #7fb3d5;
+}
+#box
+{
+padding-left:100px;
+position:absolute;
+margin-top:0;
+padding-top:1px;
+margin-left:30%;
+border:1px solid black;
+width:500px;
+height:auto;
+border-radius:30px;
+    background-color: #f2f2f2;
+
+}
+input[type=text],input[type=number],input[type=email]
+{
+width:75%;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+
+}
+input[type=submit]
+{
+width:75%;
+padding-left:100px;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+cursor:pointer;
+background-color:#4CAF50;
+}
+select
+{
+width:75%;
+padding-left:100px;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+cursor:pointer;
+
+}
+</style>
+</head>
+<body>
+<center><h1>please fill in details here</h1></center>
+<div id="box">
+</br></br>
+<form method="POST" action="http://localhost/SwachhBharat/myproject/submit.php">
+FULLNAME:</br>
+<input type="text" name="fname">
+</br>ADDRESS</br>
+<input type="text" name="address">
+</br>
+PINCODE:</br>
+<input type="number" name="pin">
+</br>
+PHONE NUMBER:
+<input type="number" name="phone" required>
+</br>
+EMAIL:
+</br>
+<input type="email" name="email" required>
+</br>
+TYPE OF SCRAP  YOU HAVE:</br>
+<select name="type">
+<option value="paper">PAPER</option>
+<option value="plastic">PLASTIC</option>
+<option value="electronic">ELECTRONIC WASTE</option>
+<option value="metal">copper/iron/etc</option>
+<option value="others">others</option>
+</select>
+</br>
+WEIGHT OF SCRAP(approx.in kgs)</br>
+<input type="number" name="weight">
+</br>
+<input type="submit" name="submit">
+</form>
+
+</div>
+
+<script>
+function myfunction()
+{
+var x=document.getElementById('box');
+if(x.style.visibility === 'hidden')
+{
+x.style.visibility='visible';
+}
+else
+{
+x.style.visibility = 'hidden';
+}
+}
+
+</script>
+
+</body>
+</html>

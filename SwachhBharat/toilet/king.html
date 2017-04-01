@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toiler Finder</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+	<title>SwachhBharat- Login</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+	  <script src="../scripts/jquery.min.js"></script>
+	  <script src="../scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+    <div class="navbar-header">
+    	<a class="navbar-brand" href="#">Swachh Bharat</a>
+    </div>
+    <ul class="nav navbar-nav">
+		<li><a href="../index.php">Home</a></li>
+		<li><a href="../home.php">Book Workers</a></li>
+		<li class="active"><a href="#">Locate Toilet</a></li>
+		<li><a href="../scrap/index.php">Sell Scrap</a></li>
+    </ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#"><span class="glyphicon glyphicon-user"></span><?php echo(" Hello, ".$row['name']); ?></a></li>
+		  <li><a href="../logout.php"><span class="glyphicon glyphicon-off"></span> Sign Out</a></li>
+		</ul>
+	  </div>
+	</nav>
+<img id="hdrimg" src="header.jpg" />
+<div id="back">
+
+<button id="Find" onclick="getLocation()">Find the Nearest toilets.</button>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";}
+    }
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<div id="map"></div>
+
+<script>
+      function initMap() {
+        var uluru1 = {lat: 19.2440,   lng: 72.8647};
+        var uluru2 = {lat: 19.2045,   lng: 72.8520};
+        var uluru3 = {lat: 19.203149, lng: 72.859733};
+        var uluru4 = {lat: 19.173804, lng: 72.860495};
+        var uluru5 = {lat: 19.2499,   lng:72.8594 };
+        var uluru6 = {lat: 19.2108,   lng: 72.8747 };
+        var uluru7 = {lat: 19.2045299,lng:72.8519955 };
+        var uluru8 = {lat: 19.2806,   lng:72.8667 };
+        var uluru9 = {lat: 19.1905,   lng:72.8639 };
+        var uluru10 = {lat: 19.2061,   lng:72.8737 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru1
+        });
+        var marker = new google.maps.Marker({
+          position: uluru1,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: uluru2,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: uluru3,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: uluru4,
+          map: map
+        });
+          var marker = new google.maps.Marker({
+          position: uluru5,
+          map: map  
+        });
+          var marker = new google.maps.Marker({
+          position: uluru6,
+          map: map  
+        });
+          var marker = new google.maps.Marker({
+          position: uluru7,
+          map: map  
+        });
+          var marker = new google.maps.Marker({
+          position: uluru8,
+          map: map  
+        });
+          var marker = new google.maps.Marker({
+          position: uluru9,
+          map: map  
+        });
+          var marker = new google.maps.Marker({
+          position: uluru10,
+          map: map  
+        });
+      }
+    
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA36SCrefAP0Nm5OOoRxI-nyDe-e2M0WQc&callback=initMap">
+    </script>
+</div>
+<div id="Footer">
+	<a href="https://www.facebook.com/"><img class="footer_button" src="fb-button.png" /></a>
+	<a href="https://twitter.com/login"><img class="footer_button" src="twitter-button.png" /></a>
+	<a href="https://in.pinterest.com/"><img class="footer_button" src="pinterest-button.png" /></a>
+</div>
+</body>
+</html>

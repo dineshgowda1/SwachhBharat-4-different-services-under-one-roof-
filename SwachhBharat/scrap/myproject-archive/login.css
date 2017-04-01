@@ -1,0 +1,56 @@
+
+body{
+background-color: #7fb3d5;
+}
+#box
+{
+padding-left:100px;
+position:absolute;
+margin-top:0;
+padding-top:1px;
+margin-left:30%;
+border:1px solid black;
+width:500px;
+height:auto;
+border-radius:30px;
+    background-color: #f2f2f2;
+
+}
+input[type=text],input[type=number],input[type=email]
+{
+width:75%;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+
+}
+input[type=submit]
+{
+width:75%;
+padding-left:100px;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+cursor:pointer;
+background-color:#4CAF50;
+}
+select
+{
+width:75%;
+padding-left:100px;
+margin-left:40%;
+padding:12px 20px;
+margin:8px 0;
+box-sizing:border-box;
+border:2px solid red;
+border-radius:4px;
+cursor:pointer;
+
+}
+
